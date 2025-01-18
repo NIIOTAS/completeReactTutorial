@@ -1,6 +1,19 @@
+import Employee from "./components/employees";
+import './App.css'
 
 
 
+function App(){
+
+    return(
+            <div className="Hero bg-slate-300">
+                    <Employee/>
+            </div>
+    );
+
+}
+
+export default App;
 
 
 
