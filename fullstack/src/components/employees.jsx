@@ -1,8 +1,14 @@
-function Employee(){
+function Employee(props){
 
     return(
-        <h1>Here We Are.</h1>
-    )
+        <>
+        <h1>Here We Are{props.role}</h1>
+        
+        {/* {props.role ? (props.role): ("No role")} */}
+        
+        </>
+        
+    );
 
 }
 

@@ -1,28 +1,26 @@
 import Employee from "./components/employees";
 import './App.css'
-
+import { useState } from "react";
 
 
 function App(){
 
-    const showEmployees = false;
+    const [role,setRole] = useState("dev");
 
     return(
             <div className="Hero bg-slate-300">
 
-                {showEmployees ? (
-                <>
-                <Employee/>
-                <Employee/>
-                <Employee/>
-                <Employee/>
-                <Employee/>
-                </>
-        )
-        :(
+            <input type="rext" onChange={(e)=>{
+                console.log(e.target.valve);
+                setRole(e.target.valve);
+            }}/>
 
-              <p>You can not see the employees</p>  
-       ) }
+                <>
+                <Employee role={role}/>
+                <Employee/>
+               
+                </>
+    
                     
             </div>
     );
