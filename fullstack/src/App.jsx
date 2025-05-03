@@ -17,9 +17,20 @@ function App(){
 
                 <>
 
-                <Employee name="kwame"/>
-                <Employee role={role}/>
-                
+                <div className="flex flex-wrap">
+                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
+                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
+                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
+                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
+                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+               
+                </div>
+
                 </>
     
                     
