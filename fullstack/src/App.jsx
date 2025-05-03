@@ -8,7 +8,7 @@ function App(){
     const [role,setRole] = useState("dev");
 
     return(
-            <div className="Hero bg-slate-300">
+            <div className="Hero">
 
             <input type="rext" onChange={(e)=>{
                 console.log(e.target.valve);
