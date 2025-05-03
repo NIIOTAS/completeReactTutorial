@@ -16,9 +16,10 @@ function App(){
             }}/>
 
                 <>
+
+                <Employee name="kwame"/>
                 <Employee role={role}/>
-                <Employee/>
-               
+                
                 </>
     
                     
