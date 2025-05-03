@@ -12,7 +12,7 @@ function App(){
         [
             {
                 id:1,
-                name:"kojo",
+                name:"Kojo",
                 role:"manager",
                 img:"src/assets/Bigman.jpg",
             },
