@@ -1,34 +1,57 @@
+
 import Employee from "./components/employees";
 import './App.css'
 import { useState } from "react";
+import {v4 as uuidv4} from "uuid";
 
 
 function App(){
 
-    const [role,setRole] = useState("dev");
+    // const [role,setRole] = useState("");
+    const [employees,setEmployees] = useState(
+        [
+            {
+                id:1,
+                name:"kojo",
+                role:"manager",
+                img:"src/assets/Bigman.jpg",
+            },
+
+            {
+                id:2,
+                name:"Sammy",
+                role:"dev",
+                img:"src/assets/otas.jpg",
+            }
+        ]
+    );
 
     return(
             <div className="Hero">
 
             <input type="rext" onChange={(e)=>{
-                console.log(e.target.valve);
-                setRole(e.target.valve);
+                console.log(e.target.value);
+                //setRole(e.target.value);
+                setEmployees(e.target.value);
             }}/>
 
                 <>
 
-                <div className="flex flex-wrap">
-                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
-                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
-                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
-                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
-                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
-                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
-                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
-                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
-                <Employee name= "kojo" role={role} img="src/assets/Bigman.jpg"/>
-                <Employee name="Sammy" role={role} img="src/assets/otas.jpg"/>
+                <div className="flex flex-wrap justify-center">
                
+                    {employees.map((employee)=>{
+                        return(
+                    <Employee 
+                    key = {uuidv4()} //this syntax is used when you decide to use a guid sam as uuid.
+                    //key = {employee.id} this can used when you decide not install uuid
+                    name = {employee.name}
+                     role={employee.role} 
+                     img ={employee.img} 
+                     alt=""/>
+                     
+                );
+                    })}
+
                 </div>
 
                 </>
