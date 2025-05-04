@@ -3,6 +3,7 @@ import Employee from "./components/employees";
 import './App.css'
 import { useState } from "react";
 import {v4 as uuidv4} from "uuid";
+import EditEmployee from "./components/EditEmployee";
 
 
 function App(){
@@ -51,7 +52,7 @@ function App(){
                      
                 );
                     })}
-
+<EditEmployee/>
                 </div>
 
                 </>
